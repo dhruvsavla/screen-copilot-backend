@@ -1,1 +1,1 @@
-web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app
+web: uvicorn app.main:application --host 0.0.0.0 --port 8000 --workers 4 --log-level info
